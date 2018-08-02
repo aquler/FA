@@ -1,0 +1,80 @@
+<view class='page'>
+  <!-- 顶部tab -->
+  <view class='tab'>
+    <view class='tab-content' bindtap='tabChange'>
+      <view data-id='1' class="{{currentIndex === '1' ? 'active' : '' }}">融资</view>
+      <view data-id='2' class="{{currentIndex === '2' ? 'active' : '' }}">转让</view>
+      <view data-id='3' class="{{currentIndex === '3' ? 'active' : '' }}">并购</view>
+      <view data-id='4' class="{{currentIndex === '4' ? 'active' : '' }}">关注</view>
+    </view>
+    <view class='tab-slidebar' style='left: {{slidebarLeft}}'></view>
+  </view>
+
+  <view class='main'>
+    <!-- 搜索 -->
+    <view class='search'>
+      <view class='search-input'>
+        <image src='../images/tabbarActive1.png'></image>
+        <text>搜索华兴公司库覆盖超过1万公司</text>
+      </view>
+      <navigator url='../filter/filter' hover-class="none">
+        <view class='search-text'>筛选</view>
+      </navigator>
+    </view>
+
+    <!-- banner -->
+    <swiper class='banner' 
+      class="swiper-container" 
+      indicator-dots="true" 
+      indicator-color="rgba(231,231,231,.3)" 
+      indicator-active-color="#b4e8d1" 
+      autoplay 
+      interval="3000">
+      <block wx:for='{{banner}}'>
+        <swiper-item>
+          <image class='banner-img' src='{{item.src}}' mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 项目 -->
+    <view class='project'>
+      <navigator 
+      url='../company/company'
+      wx:for='{{project}}' 
+      wx:for-item='pro' 
+      class='pro-item' 
+      hover-class="none">
+        <view class='item-logo'>
+          <image src='{{pro.logo}}'></image>
+        </view>
+        <view class='item-info'>
+          <view class='item-info-title'>
+            <view class='item-name'>{{pro.name}}</view>
+            <view class='item-type'>{{pro.type}}</view>
+          </view>
+          <view class='item-intro'>{{pro.intro}}</view>
+          <view class='item-tags'>
+            <block wx:for='{{pro.tags}}' wx:for-item='tag'>
+              <text>{{tag}}</text>
+            </block>
+          </view>
+          <view class='item-finance'>
+            <view class='item-round'>
+              <image src='../images/tabbarActive1.png'></image>
+              <text>{{pro.round}}</text>
+            </view>
+            <view class='item-amount'>
+              <image src='../images/tabbarActive1.png'></image>
+              <text>{{pro.amount}}</text>
+            </view>
+            <view class='item-city'>
+              <image src='../images/tabbarActive1.png'></image>
+              <text>{{pro.city}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

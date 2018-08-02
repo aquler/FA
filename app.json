@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/cooperation/cooperation",
+    "pages/about/about",
+    "pages/company/company",
+    "pages/filter/filter"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "金融FA",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#00AE65",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "项目",
+        "iconPath": "pages/images/tabbarUnselected1.png",
+        "selectedIconPath": "pages/images/tabbarActive1.png"
+      },
+      {
+        "pagePath": "pages/cooperation/cooperation",
+        "text": "合作",
+        "iconPath": "pages/images/tabbarUnselected1.png",
+        "selectedIconPath": "pages/images/tabbarActive1.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我",
+        "iconPath": "pages/images/tabbarUnselected1.png",
+        "selectedIconPath": "pages/images/tabbarActive1.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+<view class='page'>
+  <view class='header'>
+    <view class='header-wrap'>
+      <view class='info'>
+        <view class='info-pos'>{{client.pos}}</view>
+        <view class='info-name'>
+          <text>{{client.name}}</text>
+          <image src='../images/tabbarActive1.png'></image>
+        </view>
+        <view class='info-intro'>{{client.intro}}</view>
+      </view>
+      <view class='avatar'>
+        <image src='{{client.avatar}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='main-item'>
+      <text>手机</text>
+      <text>{{client.phone}}</text>
+    </view>
+    <view class='main-item'>
+      <text>微信</text>
+      <text>{{client.wechat}}</text>
+    </view>
+    <view class='main-item'>
+      <text>邮箱</text>
+      <text>{{client.mail}}</text>
+    </view>
+  </view>
+</view>

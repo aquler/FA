@@ -1,0 +1,56 @@
+.page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 28rpx;
+  color: #888;
+  font-family: PingFangSC-Medium;
+}
+
+.header {
+  background: #f3f3f3;
+  padding: 30rpx;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 12rpx;
+}
+
+.info-name {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.info-name image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.avatar image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.main {
+  padding: 30rpx;
+  background: #fff;
+}
+
+.main-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.main-item text:first-child {
+  margin-right: 30rpx;
+  color: #000;
+}

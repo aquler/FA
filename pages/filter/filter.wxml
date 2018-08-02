@@ -1,0 +1,78 @@
+<view class='page'>
+
+  <!-- 行业 -->
+  <view class='industry'>
+    <view class='title'>行业</view>
+    <view class='industry-item'>
+      <block wx:for='{{industry}}'>
+        <view class='item'>
+          <view 
+            class='item-text {{item.isSelected ? "active" : ""}}' 
+            data-id='{{item.id}}' 
+            bindtap='chooseIndustry'>
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 轮次 -->
+  <view class='round'>
+    <view class='title'>轮次</view>
+    <view class='round-item'>
+      <block wx:for='{{round}}'>
+        <view class='item'>
+          <view 
+            class='item-text {{item.isSelected ? "active" : ""}}' 
+            data-id='{{item.id}}' 
+            bindtap='chooseRound'>
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 地点 -->
+  <view class='location'>
+    <view class='title'>地点</view>
+    <view class='location-item'>
+      <block wx:for='{{location}}'>
+        <view class='item'>
+          <view 
+            class='item-text {{item.isSelected ? "active" : ""}}' 
+            data-id='{{item.id}}' 
+            bindtap='chooseLocation'>
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 保障 -->
+  <view class='guarantee'>
+    <view class='title'>保障</view>
+    <view class='guarantee-item'>
+      <block wx:for='{{guarantee}}'>
+        <view class='item'>
+          <view 
+            class='item-text {{item.isSelected ? "active" : ""}}' 
+            data-id='{{item.id}}' 
+            bindtap='chooseGuarantee'>
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='filter'>
+    <button 
+      class="{{activeBtn ? 'activeBtn' : ''}}" 
+      bindtap='filter'>
+      筛选
+    </button>
+  </view>
+</view>

@@ -1,0 +1,112 @@
+<view class='page'>
+
+  <!-- 头部 -->
+  <view class='pro-item'>
+    <view class='item-logo'>
+      <image src='{{companyInfo.logo}}'></image>
+    </view>
+    <view class='item-info'>
+      <view class='item-info-title'>
+        <view class='item-name'>{{companyInfo.name}}</view>
+        <view class='item-type'>{{companyInfo.type}}</view>
+      </view>
+      <view class='item-intro'>{{companyInfo.intro}}</view>
+      <view class='item-tags'>
+        <block wx:for='{{companyInfo.tags}}' wx:for-item='tag'>
+          <text>{{tag}}</text>
+        </block>
+      </view>
+      <view class='item-finance'>
+        <view class='item-round'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>{{companyInfo.round}}</text>
+        </view>
+        <view class='item-amount'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>{{companyInfo.amount}}</text>
+        </view>
+        <view class='item-city'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>{{companyInfo.city}}</text>
+        </view>
+      </view>
+      <view class='item-viewnum'>
+        <image src='../images/tabbarActive1.png'></image>
+        <text>{{companyInfo.viewNum}}次查看</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 项目 -->
+  <view class='main'>
+    <view class='title'>项目</view>
+    <view class='banner'>
+      <swiper>
+        <swiper-item wx:for='{{companyPic}}'>
+          <image src='{{item}}' mode="aspectFill"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class='content'>{{companyIntroduce}}</view>
+  </view>
+  
+  <!-- <view class='title'>文档</view>
+  <view class='BP content'>查看{{project.name}}BP</view> -->
+  <view class='team'>
+    <view class='title'>团队</view>
+    <view class='team-member' wx:for='{{team}}'>
+      <view class='team-member-title'>
+        <view class='team-member-name'>{{item.name}}</view>
+        <view class='team-member-position'>{{item.position}}</view>
+      </view>
+      <view class='team-mmeber-intro'>{{item.introduce}}</view>
+    </view>
+  </view>
+  
+  <!-- 融资顾问 -->
+  <view class='counselor'>
+    <view class='title'>融资顾问</view>
+    <block wx:for='{{counselor}}'>
+      <view class='counselor-item'>
+        <view class='counselor-avatar'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='counselor-info'>
+          <view class='counselor-info-name'>
+            <text>{{item.name}}</text>
+            <text></text>
+          </view>
+          <view class='counselor-info-phone'>
+            <text>手机</text>
+            <text selectable='true'>{{item.phone}}</text>
+          </view>
+          <view class='counselor-info-wechat'>
+            <text>微信</text>
+            <text selectable='true'>{{item.wechat}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 底部 -->
+  <view class="appointment">
+    <view>
+      <view class="call">
+        <image src="http://img.to8to.com/xiaochengxu/dianpubao/icon_phone.png"></image>
+      </view>
+      <view class="chat">
+        <view class="chat-icon">
+          <image src="http://img.to8to.com/xiaochengxu/dianpubao/icon_chat.png"></image>
+        </view>
+      </view>
+      
+      <view class="free_appoint">
+        <view>查看BP</view>
+      </view>
+      <view class="price">
+        <view>约见</view>
+      </view>
+    </view>
+  </view>
+</view>

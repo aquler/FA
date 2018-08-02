@@ -1,0 +1,95 @@
+<view class='page'>
+  <view class='header'>
+    <view class='avatar'>
+      <image src='{{header.avatar}}'></image>
+    </view>
+    <view class='info'>
+      <view class='info-name'>{{header.name}}</view>
+      <view class='info-company'>{{header.company}}</view>
+    </view>
+  </view>
+
+  <view class='basic-info'>
+    <view class='title'>基础信息</view>
+    <view class='main'>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png' mode='aspectFit'></image>
+          <text>邮箱</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{basic_info.mail}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>手机</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{basic_info.phone}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>职位</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{basic_info.position}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>工作地</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{basic_info.city}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='invest-tags'>
+    <view class='title'>投资标签</view>
+    <view class='main'>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png' mode='aspectFit'></image>
+          <text>轮次</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{invest_tags.round}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>币种</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{invest_tags.currency}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>行业</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{invest_tags.industry}}</text>
+        </view>
+      </view>
+      <view class='main-item'>
+        <view class='main-item-left'>
+          <image src='../images/tabbarActive1.png'></image>
+          <text>热点</text>
+        </view>
+        <view class='main-item-right'>
+          <text>{{invest_tags.hotspot}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
